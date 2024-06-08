@@ -1,0 +1,16 @@
+<!-- src/app/home/home.component.html -->
+
+
+
+<div class="chat-container">
+
+  <mat-card class="input-box">
+    <mat-form-field class="full-width">
+      <input matInput placeholder="Type your message..." [(ngModel)]="userInput" (keyup.enter)="sendMessage()">
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="sendMessage()">Send</button>
+  </mat-card>
+  <mat-card *ngIf="output" class="chat-box">
+    <h1>{{output}}</h1>
+  </mat-card>
+</div>
